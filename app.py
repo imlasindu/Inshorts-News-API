@@ -7,10 +7,6 @@ app = Flask(__name__)
 app.secret_key = "i_am_not_feeling_sleepy_so_i_am_coding_this"
 CORS(app)
 
-@app.route('/')
-def home():
-    return 'News API is UP!<br><br>A part of <a href="https://t.me/sjprojects">Sj Projects</a>'
-
 @app.route('/news')
 def news():
     if request.method == 'GET':
